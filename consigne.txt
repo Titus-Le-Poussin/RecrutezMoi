@@ -1,0 +1,57 @@
+============================================================
+           CONSIGNES DE DÉMARRAGE - Projet TimHire
+============================================================
+
+⚠️ Objectif de ces consignes : 
+Suivre une liste logique, précise et adaptée à ton niveau 
+pour construire ton site sans te perdre.
+
+============================================================
+ÉTAPE 0 - PRÉPARATION DU DOSSIER DE TRAVAIL
+============================================================
+[ ] Crée un dossier sur ton PC : timhire
+[ ] Dans ce dossier, crée 3 sous-dossiers :
+    └── frontend/
+    └── backend/
+    └── data/
+
+[ ] Crée un fichier `plan_de_travail.txt` et colle dedans le plan complet
+[ ] Crée un fichier `README.md` (version Markdown du plan, pour GitHub)
+[ ] Crée un dépôt GitHub et push ton projet vide avec ces fichiers
+
+============================================================
+ÉTAPE 1 - EXPORT DES DONNÉES EXCEL
+============================================================
+[ ] Ouvre ton fichier Excel contenant toutes tes candidatures
+[ ] Clique sur “Fichier” > “Exporter” > “CSV UTF-8 (.csv)”
+[ ] Enregistre ce fichier sous `data/candidatures.csv`
+
+⚠️ Le nom des colonnes doit être clair. Exemple :
+    commentaire, entreprise, domaine, adresse, site, poste, lien_offre,
+    lettre_personnalisee, contact, date_envoi, logo
+
+============================================================
+ÉTAPE 2 - PRÉPARATION DU BACKEND
+============================================================
+[ ] Crée un fichier `backend/app.py`
+[ ] Installe Flask :  
+    → `pip install flask pandas`
+
+[ ] Commence simple :
+    - Charger les données CSV avec `pandas`
+    - Créer une route `/api/offres` qui retourne les données en JSON
+
+✅ Exemple :
+```python
+from flask import Flask, jsonify
+import pandas as pd
+
+app = Flask(__name__)
+
+@app.route("/api/offres")
+def offres():
+    df = pd.read_csv("data/candidatures.csv")
+    return jsonify(df.to_dict(orient="records"))
+
+if __name__ == "__main__":
+    app.run(debug=True)

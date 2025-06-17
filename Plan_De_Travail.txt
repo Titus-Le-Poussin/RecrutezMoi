@@ -1,0 +1,91 @@
+============================================================
+                 PLAN DE TRAVAIL - Projet TimHire
+============================================================
+
+1. OBJECTIF DU PROJET
+---------------------
+Créer une plateforme web interactive inspirée de HelloWork, 
+affichant toutes les offres d’emploi auxquelles j’ai postulé 
+(200+), avec filtres dynamiques, statistiques, et une 
+fonctionnalité inversée où les entreprises peuvent me proposer 
+des postes.
+
+2. CONTEXTE
+-----------
+Projet personnel dans le cadre de la préparation à la piscine 
+pré-MSc d’Epitech. L’objectif est de valoriser mes compétences 
+web (Python, JS…) sur un projet utile, concret et original.
+
+3. CAHIER DES CHARGES
+----------------------
+
+Fonctionnalités principales :
+- Affichage des offres (cartes à la HelloWork)
+- Filtres dynamiques : date, domaine, contrat, ville, fonction
+- Bouton “Voir l’offre” qui redirige vers l’offre réelle
+- Affichage du logo de l’entreprise
+- Affichage de la ville uniquement (à partir de l’adresse)
+- Page “Espace Candidat” : nom, prénom, CV, infos perso
+- Page “Statistiques” : graphes des candidatures par date, secteur, etc.
+- Page “Qui suis-je ?” : biographie courte + liens réseaux
+- Page “Recrutez-moi” : formulaire pour entreprise (offre inversée)
+
+NOUVELLE FONCTIONNALITÉ : Offres créées par Timothée
+-----------------------------------------------------
+
+- Chaque carte représente un poste (ex : Développeur Web Full Stack)
+- Bouton “Voir l’offre” : redirige vers une lettre de motivation personnalisée + mon CV
+- Bouton “Postuler à ce profil” : formulaire à remplir par l’entreprise (nom, mail, offre, message)
+- Objectif : me vendre comme un produit premium, prêt à l’emploi
+
+Données sources (import depuis Excel/CSV) :
+- Commentaire
+- Nom de l’entreprise
+- Domaine de l’entreprise
+- Adresse (simplifiée en ville)
+- Lien du site web
+- Titre du poste
+- Lien de l’offre
+- Lettre personnalisée (oui/non)
+- Contact (mail/téléphone)
+- Date d’envoi (devient “date de publication”)
+- Logo (PNG/JPG)
+
+4. STACK TECHNIQUE ENVISAGÉE
+-----------------------------
+Front-end : HTML, CSS, JavaScript, Bootstrap ou Tailwind  
+Back-end : Python (Flask ou FastAPI)  
+Base de données : SQLite ou PostgreSQL  
+Données : import CSV / traitement via Pandas  
+Stats : Chart.js ou Plotly  
+Déploiement : Render, Railway, GitHub Pages, ou autre
+
+5. ROADMAP / ÉTAPES
+--------------------
+[ ] Nettoyage et conversion du fichier Excel en CSV  
+[ ] Choix et mise en place du framework Python  
+[ ] Création du modèle de données  
+[ ] Import automatique des candidatures  
+[ ] Création des pages principales (Accueil, Offres, Candidat, Stats)  
+[ ] Intégration des filtres et du tri  
+[ ] Création de la page “Espace Candidat” (CV, infos)  
+[ ] Création de la page “Statistiques” (graphique dynamique)  
+[ ] Création de la page “Recrutez-moi” (formulaire entreprise)  
+[ ] Création de la page “Offres créées par Timothée”  
+[ ] Formulaire entreprise pour postuler à moi  
+[ ] Finitions graphiques et UX
+
+6. ORIGINALITÉ DU PROJET
+-------------------------
+- Les entreprises doivent “postuler pour moi”  
+- Données réelles (200 candidatures suivies depuis avril)  
+- Portail hybride entre portfolio, outil de suivi et jobboard  
+- Section miroir où je suis l’offre d’emploi  
+- Site utile + démonstration directe de mes compétences  
+- Design stylisé et second degré assumé
+
+7. OBJECTIF FINAL
+------------------
+Un site pro, réactif, moderne, lisible, drôle, 100% moi.  
+Outil de suivi et portfolio vivant, utile pour les entretiens  
+et candidatures futures.
