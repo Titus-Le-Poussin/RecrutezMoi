@@ -1,21 +1,13 @@
 ============================================================
-           CONSIGNES DE DÉMARRAGE - Projet TimHire
-============================================================
-
-⚠️ Objectif de ces consignes : 
-Suivre une liste logique, précise et adaptée à ton niveau 
-pour construire ton site sans te perdre.
-
-============================================================
 ÉTAPE 0 - PRÉPARATION DU DOSSIER DE TRAVAIL
 ============================================================
-[ ] Crée un dossier sur ton PC : timhire
-[ ] Dans ce dossier, crée 3 sous-dossiers :
+[✅] Crée un dossier sur ton PC : timhire
+[✅] Dans ce dossier, crée 3 sous-dossiers :
     └── frontend/
     └── backend/
     └── data/
 
-[ ] Crée un fichier `plan_de_travail.txt` et colle dedans le plan complet
+[✅] Crée un fichier `plan_de_travail.txt` et colle dedans le plan complet
 [ ] Crée un fichier `README.md` (version Markdown du plan, pour GitHub)
 [ ] Crée un dépôt GitHub et push ton projet vide avec ces fichiers
 
@@ -41,7 +33,7 @@ pour construire ton site sans te perdre.
     - Charger les données CSV avec `pandas`
     - Créer une route `/api/offres` qui retourne les données en JSON
 
-✅ Exemple :
+ Exemple :
 ```python
 from flask import Flask, jsonify
 import pandas as pd
