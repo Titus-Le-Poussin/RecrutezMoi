@@ -17,15 +17,15 @@ body {
 }
 
 .banderole_main {
-    display: flex;
+    display: flex; 
     flex-direction: row;
     align-items: stretch;
-    width: 100%;
-    max-width: 1200px;
-    height: 220px;
+    width: 1500px; /* largeur de la banderole */
+    max-width: 1500px;
+    height: 440px; /* hauteur de la banderole */
     background-color: #33658a;
     border-radius: 30px;
-    margin: 40px auto 60px auto;
+    margin: 200px auto 500px auto; /* marge pour centrer la banderole */
     box-sizing: border-box;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -36,7 +36,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Ajoute ici ton image/logo ou texte */
+
+
 }
 
 .banderole_right {
@@ -44,11 +45,11 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    padding: 0 40px 20px 40px;
+    padding: 0 500px 20px 40px;
     /* Bordure blanche arrondie comme sur ton image */
-    border: 4px solid #fff;
-    border-radius: 0 0 30px 60px;
-    margin: 20px 20px 20px 0;
+    border: 7px solid #fff;
+    border-radius: 60px 0px 30px 0;
+    margin: 212px 0px 0px 0px;
     background: transparent;
     box-sizing: border-box;
 }
@@ -58,10 +59,10 @@ body {
     font-size: 60px;
     font-family: 'bauhaus 93', sans-serif;
     font-weight: bold;
-    text-align: right;
+    text-align: Left;
     line-height: 1.1;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 0 #23425c;
+    letter-spacing: 3px;
+
 }
 
  /*p {
@@ -71,3 +72,9 @@ body {
     
 }
     */
+.logo {
+    height: 400px; /* hauteur */
+    width: auto; /* largeur */
+    margin-right: 100px;
+    margin-left: 100px;
+}
