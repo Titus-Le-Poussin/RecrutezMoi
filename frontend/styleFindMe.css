@@ -46,7 +46,7 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    padding: 0 10px 20px 40px;
+    padding: 0 100px 20px 40px;
     /* Bordure blanche arrondie comme sur ton image */
     border: 7px solid #fff;
     border-radius: 120px 0px 30px 0;
@@ -116,4 +116,13 @@ body {
     align-items: center;
     gap: 10px; /* espace entre le texte et l'image */
 
+}
+.espace_boutons {
+    display: flex;
+    justify-content: center; /* centre les boutons */
+    width: auto;
+    gap: 30px; /* espace entre les boutons */
+    padding: 0; /* marge intérieure pour centrer les boutons */
+    margin-top: 0px; /* espace entre la banderole et les boutons */
+    margin-bottom: 50px;
 }
