@@ -23,15 +23,12 @@ body {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    width: 1500px;
-    /* largeur de la banderole */
-    max-width: 1500px;
-    height: 440px;
-    /* hauteur de la banderole */
+    width: 1700px;/* largeur de la banderole */
+    max-width: 1900px;
+    height: 500px;/* hauteur de la banderole */
     background-color: #33658a;
     border-radius: 30px;
-    margin: 200px auto 200px auto;
-    /* marge pour centrer la banderole */
+    margin: 100px auto 400px auto;/* marge pour centrer la banderole */
     box-sizing: border-box;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -51,8 +48,7 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    padding: 0 100px 20px 40px;
-    /* Bordure blanche arrondie comme sur ton image */
+    padding: 0 100px 20px 40px;/* Bordure blanche arrondie comme sur ton image */
     border: 7px solid #fff;
     border-radius: 120px 0px 30px 0;
     margin: 120px 0px 0px 0px;
@@ -75,10 +71,8 @@ body {
 
 
 .logo {
-    height: 400px;
-    /* hauteur */
-    width: auto;
-    /* largeur */
+    height: 400px;/* hauteur */
+    width: auto;/* largeur */
     margin-right: 100px;
     margin-left: 100px;
 }
@@ -86,63 +80,53 @@ body {
 .espace_candidat_bouton {
     background-color: #fff;
     color: #000000;
-    width: 340px;
-    /* largeur du bouton*/
-    height: 100px;
-    /* Hauteur du bouton*/
+    width: 200px; /* largeur du bouton*/
+    height: 50px;/* Hauteur du bouton*/
     text-align: left;
     font-family: 'bauhaus 93', sans-serif;
     border-radius: 50px;
     padding: 0 20px;
-    border: 5px solid #000000;
-    font-size: 24px;
+    border: 3px solid #000000;
+    font-size: 15px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 10px;
-    /* espace entre le texte et l'image */
+    gap: 10px; /* espace entre le texte et l'image */
 
 }
 
 .candidat_logo {
-    height: 50px;
-    /* hauteur */
-    width: auto;
-    /* largeur */
+    height: 25px;/* hauteur */
+    width: auto;/* largeur */
     margin: auto;
 }
 
 .espace_entreprise_bouton {
     background-color: #fff;
     color: #000000;
-    width: 340px;
-    /* largeur du bouton*/
-    height: 100px;
-    /* Hauteur du bouton*/
+    width: 200px;/* largeur du bouton*/
+    height: 50px;/* Hauteur du bouton*/
     text-align: left;
     font-family: 'bauhaus 93', sans-serif;
     border-radius: 50px;
     padding: 0 20px;
-    border: 5px solid #000000;
-    font-size: 24px;
+    border: 3px solid #000000;
+    font-size: 15px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 10px;
-    /* espace entre le texte et l'image */
+    gap: 10px; /* espace entre le texte et l'image */
 
 }
 
 .espace_boutons {
     display: flex;
-    justify-content: center;
-    /* centre les boutons */
+    justify-content: center;/* centre les boutons */
     width: auto;
-    gap: 30px;
-    /* espace entre les boutons */
-    padding: 0;
-    /* marge intérieure pour centrer les boutons */
-    margin-top: 0px;
-    /* espace entre la banderole et les boutons */
-    margin-bottom: 50px;
+    gap: 30px;/* espace entre les boutons */
+    padding: 0px;/* marge intérieure pour centrer les boutons */
+    margin-top: 100px;/* espace entre la banderole et les boutons */
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 1100px;
 }
