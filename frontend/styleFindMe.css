@@ -10,8 +10,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     padding: 20px;
     font-size: 20px;
     font-family: 'bauhaus 93';
@@ -26,10 +25,10 @@ body {
     width: 90vw;/* largeur de la banderole */
     max-width: 1900px;
     height: 28vw;/* hauteur de la banderole */
-    max-height: 500px;/* hauteur maximale de la banderole */
+    max-height: 400px;/* hauteur maximale de la banderole */
     background-color: #33658a;
     border-radius: 30px;
-    margin: 100px auto 400px auto;/* marge pour centrer la banderole */
+    margin: 50px auto 400px auto;/* marge pour centrer la banderole */
     box-sizing: border-box;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -84,8 +83,10 @@ body {
 .espace_candidat_bouton {
     background-color: #fff;
     color: #000000;
-    width: clamp(120px, 18vw, 200px); /* largeur du bouton*/
+    width: clamp(140px, 18vw, 200px); /* largeur du bouton*/
+    min-width: 140px; 
     height: clamp(40px, 6vw, 50px);/* Hauteur du bouton*/
+    min-height: 40px;
     text-align: left;
     font-family: 'bauhaus 93', sans-serif;
     border-radius: 50px;
@@ -108,8 +109,10 @@ body {
 .espace_entreprise_bouton {
     background-color: #fff;
     color: #000000;
-    width: clamp(120px, 18vw, 200px);/* largeur du bouton*/
+    width: clamp(140px, 18vw, 200px);/* largeur du bouton*/
+    min-width: 140px;
     height: clamp(40px, 6vw, 50px);/* Hauteur du bouton*/
+    min-height: 40px;
     text-align: left;
     font-family: 'bauhaus 93', sans-serif;
     border-radius: 50px;
@@ -125,10 +128,38 @@ body {
 
 .espace_boutons {
     display: flex;
-    justify-content: flex-end;/* centre les boutons  à droite*/
-    width: 90vw;/* largeur de la section des boutons */
-    max-width: 1900px;/* largeur maximale de la section des boutons */
+    justify-content: flex-end;/* aligne les boutons à droite */
+    margin-left: auto;
+    margin-top: 0px;
+    margin-bottom: 0;
+    margin-right: 0;
+    width: 100%;/* largeur de la section des boutons */
+    max-width: none;/* largeur maximale de la section des boutons */
     gap: 30px;/* espace entre les boutons */
     padding: 0px;/* marge intérieure pour centrer les boutons */
-    margin: 100px auto 0 auto;
+   
+}
+
+.favicon_image {
+    height: 100%;
+    width: auto;
+    max-height: 100px; /* ajuste selon besoin */
+    max-width: 150px;
+ 
+}
+
+
+
+.header {
+    display: flex;
+    align-items: center;      /* centre verticalement */
+    width: 90vw;
+    max-width: 1900px;
+    margin: 30px auto 0 auto;
+}
+
+.favicon {
+    display: flex;
+    align-items: center;
+    height: clamp(40px, 6vw, 80px); /* adapte la hauteur */
 }
