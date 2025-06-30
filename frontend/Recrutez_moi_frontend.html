@@ -87,10 +87,34 @@
             <div class = "carte">
                 <img src="FranceV2.png" alt="Carte" class="carte_image">
             </div>
-            <div class = "recherche_carte">
+            <div class = "barre_de_recherche_emplacement">
+                <span class = "emplacement_txt">Emplacement</span>
+                <button class = "recherche-btn">
+                    <img src="fleche2.png" alt="Carte" class="recherche-icon">
+                </button>
 
+                <ul class= "recherche-list">
+                    <li class="recherche-item">Option 1</li>
+                    <li class="recherche-item">Option 2</li>
+                    <li class="recherche-item">Option 3</li>
+                </ul>
             </div>
         </div>
- 
+    <script>
+document.querySelectorAll('.recherche-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const list = this.parentElement.querySelector('.recherche-list');
+        if (list) {
+            list.style.display = (list.style.display === 'block') ? 'none' : 'block';
+        }
+    });
+});
+document.addEventListener('click', function() {
+    document.querySelectorAll('.recherche-list').forEach(list => {
+        list.style.display = 'none';
+    });
+});
+</script>
     </body>
 </html>
