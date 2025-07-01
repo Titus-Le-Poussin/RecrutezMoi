@@ -1,12 +1,13 @@
 html,
 body {
-    height: 100%;
+
     margin: 0;
     padding: 0;
 
 }
 
 body {
+    height: 100%;
     display: flex;
     flex-direction: column;
 
@@ -235,6 +236,42 @@ body {
     object-fit: cover; /* ou 'contain' selon le rendu voulu */
     display: block;
 }
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; 
+    width: 90vw;/* largeur de la banderole */
+    max-width: 1900px;
+    height: clamp(120px, 20vw, 300px);/* hauteur de la banderole */
+    background-color: #33658a;
+    border-radius: 30px;
+    margin: 30px auto clamp(30px, 6vw, 80px) auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.footer_social_networks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: clamp(30px, 5vw, 60px), clamp(30px, 5vw, 60px), clamp(30px, 5vw, 60px) 0px; 
+    height: 50%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer_copyright ul {
+    width: 80%;
+    margin: 20px auto 0 auto; /* espace au-dessus, centré */
+    padding: 0;
+    text-align: center;
+    height: 50%;
+    background-color: #fff;
+}
+
 
 @media (max-width: 900px) {
     .espace_carte_et_recherche {
