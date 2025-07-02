@@ -266,11 +266,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(12px, 2vw, 25px);
+    
     
 }
 
 .footer_copyright ul {
+    font-size: clamp(3px, 2vw, 20px);
+    gap: clamp(8px, 3vw, 40px);
     border-radius: 
   clamp(150px, 15vw, 200px)   /* haut-gauche */
   0                        /* haut-droit */
@@ -281,6 +283,8 @@ body {
 
 
 .footer_social_networks {
+    font-size: clamp(12px, 2vw, 25px);
+    gap: clamp(8px, 3vw, 32px);
     border-radius: 
   clamp(150px, 15vw, 200px)  /* haut-gauche */
   clamp(300px, 15vw, 400px)   /* haut-droit */
@@ -289,8 +293,8 @@ body {
 }
 
 .footer_social_networks img {
-    height: 32px;
-    width: 32px;
+    height: clamp(25px, 4vw, 45px);
+    width: auto;
     margin: 0 8px;
 }
 .social_networks_txt {
