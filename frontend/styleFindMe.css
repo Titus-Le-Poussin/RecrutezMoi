@@ -239,8 +239,8 @@ body {
 
 .footer {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start; 
+    flex-direction: column;
+    align-items: center; 
     width: 90vw;/* largeur de la banderole */
     max-width: 1900px;
     height: clamp(120px, 20vw, 300px);/* hauteur de la banderole */
@@ -249,27 +249,61 @@ body {
     margin: 30px auto clamp(30px, 6vw, 80px) auto;
     box-sizing: border-box;
     overflow: hidden;
+    gap: 18px; /* espace entre les éléments du footer */
 }
 
 
-.footer_social_networks {
+.footer_social_networks,
+.footer_copyright ul {
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 12px 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
-    border-radius: clamp(30px, 5vw, 60px), clamp(30px, 5vw, 60px), clamp(30px, 5vw, 60px) 0px; 
-    height: 50%;
-    width: 80%;
-    margin: 0 auto;
+    
 }
 
 .footer_copyright ul {
-    width: 80%;
-    margin: 20px auto 0 auto; /* espace au-dessus, centré */
-    padding: 0;
+    flex-direction: row;
+    gap: 18px;
+    list-style: none;
+    padding: 12px 24px;
+    margin-top: 10px;
     text-align: center;
-    height: 50%;
-    background-color: #fff;
+    color: #222;
+    font-size: 1rem;
+    background: #fff;
+    border-radius: 
+  clamp(30px, 5vw, 60px)   /* haut-gauche */
+  0                        /* haut-droit */
+  clamp(30px, 5vw, 60px)   /* bas-droit */
+  clamp(30px, 5vw, 60px);  /* bas-gauche */
+}
+
+
+
+.footer_social_networks {
+
+    border-radius: 
+  clamp(30px, 5vw, 60px)   /* haut-gauche */
+  clamp(30px, 5vw, 60px)   /* haut-droit */
+  0                         /* bas-droit */
+  clamp(30px, 5vw, 60px);  /* bas-gauche */
+}
+
+.footer_social_networks img {
+    height: 32px;
+    width: 32px;
+    margin: 0 8px;
+}
+.social_networks_txt {
+    margin-right: 16px;
+    font-weight: bold;
+    color: #222;
 }
 
 
