@@ -23,6 +23,7 @@ body {
 .header {
     display: flex;
     align-items: center;      /* centre verticalement */
+    justify-content: center;
     width: 90vw;
     max-width: 1900px;
     margin: 10px auto 10px auto;
@@ -37,4 +38,8 @@ body {
     display: flex;
     align-items: center;
     height: clamp(80px, 6vw, 80px); /* adapte la hauteur */
+    align-items: center;
+    justify-content: center;
 }
+
+
