@@ -7,16 +7,16 @@ body {
 }
 
 body {
-    min-height: 100vh;
+    min-height: 100vh; /* Hauteur minimum */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Direction en colonne */
+    justify-content: center; /* Centrer Horizontalement */
+    align-items: center; /* centre verticalement */
     padding: 20px;
-    font-size: 20px;
-    font-family: 'bauhaus 93';
-    background-color: #86bbd8;
-    color: rgb(255, 255, 255);
+    font-size: 20px; /* Taille général du texte de la page */
+    font-family: 'bauhaus 93'; /* Type de police */
+    background-color: #86bbd8; /* Couleur de fond */
+    color: rgb(255, 255, 255);  /* PROBABLEMENT INUTIL, A SUPPR */
 
 }
 
@@ -36,12 +36,11 @@ body {
     width: auto;
     max-height: 200px; /* hauteur maximale de l'icône */
     max-width: 200px; /* largeur maximale de l'icône */
-    display: flex;
-    align-items: center;
+    display: flex; /* INUTILE : display:flex sur une image n'a pas d'effet */
+    align-items: center; /* INUTILE : sur une image seule */
     height: clamp(80px, 6vw, 80px); /* adapte la hauteur */
     margin-right: 620px; /* espace entre l'icône et le texte */
-    align-items: center;
-    justify-content: center;
+    justify-content: center; /* INUTILE : sur une image seule */
 }
 
 
