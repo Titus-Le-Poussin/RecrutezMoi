@@ -52,7 +52,7 @@
                     <h1>Content de te revoir!</h1>
                 </div>
                 <div class = "Connexion_buttons">
-                    <button class="button_connexion">Se connecter</button>
+                    <button class="button_connexion active">Se connecter</button>
                     <button class="button_inscription">S'inscrire</button>
                 </div>
                 <div class = "Network_connexion">
@@ -73,10 +73,17 @@
                         </div>
                         <button type="submit" class="button_submit">Se connecter</button>
                     </form>
+                </div>
             </div>
-
         </div>
-
+    <script>
+document.querySelectorAll('.Connexion_buttons button').forEach(btn => {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.Connexion_buttons button').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+</script>
     </body>
 
 </DOCTYPE>
