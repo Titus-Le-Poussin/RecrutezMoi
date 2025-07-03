@@ -107,7 +107,7 @@ body {
 
 .logos {
     display: flex;
-    gap: 40px;
+    gap: 50px;
 }
 
 .Linkedin_icon {
@@ -116,15 +116,24 @@ body {
 }
 
 .google_icon {
-    width: clamp(30px, 5vw, 50px);
-    height: auto;
+    width: clamp(25px, 5vw, 50px);
+    height: clamp(23px, 5vw, 48px);
 
 }
 
 .or {
     display: flex;
-    align-items: column;
     justify-content: center;
     margin-top: 0px;
     font-size: clamp(15px, 3vw, 30px);
+}
+
+
+.formulaire_connexion {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(20px, 5vw, 40px);
+    align-items: center;
+    gap: 20px;
+    width: 100%;
 }
