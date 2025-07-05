@@ -75,10 +75,44 @@
                         </div>
                         <button type="submit" class="button_submit">Se connecter</button>
                     </form>
+                    <form class = "formulaire_inscription">
+                        <label for="email">Adresse mail:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="password">Mot de passe:</label>
+                        <input type="password" id="password" name="password" required>
+                        <button type = "forgot_password" class="button_forgot_password">mot de passe oublié?</button>
+                        <div class = "checkbox">
+                            <input type="checkbox" id="remember_me" name="remember_me">
+                            <label for="remember_me">Rester connecté</label>
+                        </div>
+                        <button type="submit" class="button_submit">Se connecter</button>
+                    </form>
+
                 </div>
             </div>
         </div>
-    <script>
+<script> // Script pour gérer l'affichage des formulaires de connexion et d'inscription
+const btnConnexion = document.querySelector('.button_connexion');
+const btnInscription = document.querySelector('.button_inscription');
+const formConnexion = document.querySelector('.formulaire_connexion');
+const formInscription = document.querySelector('.formulaire_inscription');
+
+btnConnexion.addEventListener('click', () => {
+    btnConnexion.classList.add('active');
+    btnInscription.classList.remove('active');
+    formConnexion.style.display = 'flex';
+    formInscription.style.display = 'none';
+});
+
+btnInscription.addEventListener('click', () => {
+    btnInscription.classList.add('active');
+    btnConnexion.classList.remove('active');
+    formConnexion.style.display = 'none';
+    formInscription.style.display = 'flex';
+});
+</script>
+
+<script> // Script pour gérer l'activation des boutons de connexion et d'inscription
 document.querySelectorAll('.Connexion_buttons button').forEach(btn => {
     btn.addEventListener('click', function() {
         document.querySelectorAll('.Connexion_buttons button').forEach(b => b.classList.remove('active'));
