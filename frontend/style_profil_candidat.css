@@ -42,4 +42,27 @@ body {
     height: clamp(80px, 6vw, 80px); /* adapte la hauteur */
 }
 
+.hublot {
+    position: relative;
+    width: 220px; /* adapte à la taille de ton hublot */
+    height: 220px;
 }
+
+.image_hublot {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.image_profil {
+    position: absolute;
+    top: 15%; left: 15%; /* ajuste pour centrer dans le hublot */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: contain;;
+    z-index: 2;
+}
+

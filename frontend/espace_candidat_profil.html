@@ -60,6 +60,93 @@
             </div> //Banderolle_Top
         </div> //header
 
+        <div class = "BlocButtonPage">
+            <div class = "buttonPage">
+                <button class="button_mes_informations">Mes Informations</button>
+                <button class ="button_ma_situation">Ma Situation</button>
+                <button class="button_mes_alertes">Mes Alertes</button>
+                <button class="button_mes_CV">Mes CV</button>
+            </div> //buttonPage
+        </div> //BlocButtonPage
+        <div class = "BlocMonProfil">
+            <div class="MonProfilContent">
+                <div>
+                    <title>Mon Profil</title>
+                    <h1>Une photo? <BR>(Souriante et professionel)</BR></h1>
+                </div>
+                
+                <div class="MonProfilImage">
+                    <div class="hublot">
+                        <img src="Hublo@4x.png" class="image_hublot">
+                        <img src="fish profile@4x.png" class="image_profil" id="photo_profil">
+                    </div>
+                    <form class="upload_image_form">
+                        <label for="image_upload" class="upload_label">Changer la photo</label>
+                        <input type="file" id="image_upload" name="image_upload" accept="image/*" class="upload_input">
+                    </form>
+                    <div class = "info_profil">
+                        <div><span id = "nom_profil">NOM </span><span id = "prenom_profil">Prénom</span></div>
+                        <div><span id = "situation_profil">Situation</span></div>
+                        <div><span id = "email_profil">Adresse mail</span><span id = "tel_profil">Téléphone</span></div>
+                    </div>
+                </div>
+            </div> 
+        </div> //BlocMonProfil
+        <div class = "BlocMonStatus">
+            <div class = "StatusContent">
+                <div class = "StatusTitle">
+                    <h2>Mon Status</h2>
+                </div>
+                <div class = "ButtonSatusDropDown">
+                    <div class = "ButtonStatusContent">
+                        <button id = "status_selected_btn" class="button_status">En recherche active</button>
+                        <div id = "status_selected" class="Options_status" style ="display: none;"  >
+                            <button class="Status_options">En recherche active</button>
+                            <button class="Status_options">Ouvert aux opportunitées</button>
+                            <button class="Status_options">Pas en recherche</button>
+                        </div>
+                    </div>
+                    <img src="fleche2.png" class="fleche_status">
+                    
+                </div>
+                </div>
+        </div>
+
+<script>
+const statusBtn = document.getElementById('status_selected_btn');
+const statusOptions = document.getElementById('status_options');
+const options = statusOptions.querySelectorAll('.status_option');
+
+statusBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    statusOptions.style.display = statusOptions.style.display === 'none' ? 'block' : 'none';
+});
+
+options.forEach(option => {
+    option.addEventListener('click', () => {
+        statusBtn.textContent = option.textContent + ' ▼';
+        statusOptions.style.display = 'none';
+    });
+});
+
+document.addEventListener('click', (e) => {
+    if (!statusBtn.contains(e.target) && !statusOptions.contains(e.target)) {
+        statusOptions.style.display = 'none';
+    }
+});
+</script>
+<script> //remplacer la photo du profil
+document.getElementById('image_upload').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+            document.getElementById('photo_profil').src = ev.target.result;
+        }
+        reader.readAsDataURL(file);
+    }
+});
+</script>
     </body>
 
 </DOCTYPE>
