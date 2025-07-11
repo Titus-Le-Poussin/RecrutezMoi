@@ -107,12 +107,63 @@
                         </div>
                     </div>
                     <img src="fleche2.png" class="fleche_status">
-                    
+                                      
                 </div>
-                </div>
-        </div>
+            </div>
+        </div> //BlocMonStatus
 
-<script>
+        <div class = "BlocPrincipale">
+            <div class = "BlocMesInformations">
+                <div class = "MesInformationsContent">
+                    <div class = "MesInformationsTitle">
+                        <h2>Mes Informations</h2>
+                        <p>les champs obligatoires sont précédés d'une étoile *</p1>
+                    </div>
+                    <div class = "MesInformationsText">
+                        <div class = "InformationsLEFT">
+                            <div class = "NomPrenom">
+                                <span class = "textPrenom">Prénom *</span>
+                                <input type="text" id="prenom_input" placeholder="Entrez votre prénom" class="input_prenom">
+                            </div>
+                            <div class = "EmailTel">
+                                <span class = "textEmail">Adresse e-mail *</span>
+                                <input type="email" id="email_input" placeholder="Entrez votre adresse e-mail" class="input_email">
+                            </div>
+                            <div class = "PermisDeTravail">
+                                <span class = "textPermisTravail">Permis de travail en France? </span>
+                                <button id = "Oui_Button_Permis" class="button_Permis">Oui</button>
+                                <button id = "Non_Button_Permis" class="button_Permis">Non</button>
+                            </div>
+                            <div class = "SupprimerCompte">
+                                <span class = "textSupprimerCompte">Supprimer mon compte</span>
+                                <button id = "SupprimerCompteButton" class="button_SupprimerCompte">Supprimer</button>
+                            </div>
+
+
+                        </div>
+                        <div class = "InformationsRIGHT">
+                            <div class = "NomPrenom">
+                                <span class = "textNom">Nom *</span>
+                                <input type="text" id="nom_input" placeholder="Entrez votre nom" class="input_nom">
+                            </div>
+                            <div class = "TelAdresse">
+                                <span class = "textTel">Téléphone *</span>
+                                <input type="tel" id="tel_input" placeholder="Entrez votre numéro de téléphone" class="input_tel">
+                            </div>
+                            <div class = "VilleResidence">
+                                <span class = "textResidence">Ville de résidence *</span>
+                                <input type="text" id="residence_input" placeholder="Entrez votre ville de résidence" class="input_residence">
+                            </div>
+                            <div class = "EnregistrerInformations">
+                                <span class = "textEnregistrerInformations">Enregistrer</span>
+                                <button id = "EnregistrerButton" class="button_Enregistrer">Enregistrer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> //MesInformationsContent
+            </div>
+
+<script> //menu deroulant Status NON FONCTIONNEL
 const statusBtn = document.getElementById('status_selected_btn');
 const statusOptions = document.getElementById('status_options');
 const options = statusOptions.querySelectorAll('.status_option');
