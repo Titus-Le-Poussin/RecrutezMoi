@@ -206,18 +206,77 @@
                     <div class = "SecteurActivite">>
                         <span class = "textSecteurActivite">Secteur(s) d'activité? *</span>
                         <select id="secteur_activite_selected_btn" class="button_secteur_activite">
-                            <option value="informatique">Informatique</option>
-                            <option value="marketing">Marketing</option>
-                            <option value="finance">Finance</option>
-                            <option value="ressources_humaines">Ressources Humaines</option>
-                            <option value="logistique">Logistique</option>
-                            <option value="autre">Autre</option>
+                            <option value = "Agriculture/Pêche">Agriculture/Pêche</option>
+                            <option value = "Banque/Assurance/finance">Banque/Assurance/finance</option>
+                            <option value = "BTP">BTP</option>
+                            <option value = "Distribution/Commerce de gros">Distribution/Commerce de gros</option>
+                            <option value = "Enseignement/Formation">Enseignement/Formation</option>
+                            <option value = "Immobilier">Immobilier</option>
+                            <option value = "Industrie Aéraunotique/Aérospacial">Industrie Aéraunotique/Aérospacial</option>
+                            <option value = "Industrie Agro-Alimentaire">Industrie Agro-Alimentaire</option>
+                            <option value = "Industrie Auto/Meca/Navale">Industrie Auto/Meca/Navale</option>
+                            <option value = "Industrie High-tech/Telecom">Industrie High-tech/Telecom</option>
+                            <option value = "Industrie Manufacturière">Industrie Manufacturière</option>
+                            <option value = "Industrie Pétrolière/Pétrochimie">Industrie Pétrolière/Pétrochimie</option>
+                            <option value = "Industrie Pharmaceutique/Biotechn./chimie">Industrie Pharmaceutique/Biotechn./chimie</option>
+                            <option value = "Industrie Média/Internet/Communication">Industrie Média/Internet/Communication</option>
+                            <option value = "Restauration">Restauration</option>
+                            <option value = "Santé/Social/Association">Santé/Social/Association</option>
+                            <option value = "Secteur énergie/Environnement">Secteur énergie/Environnement</option>
+                            <option value = "Secteur Informatique/ESN">Secteur Informatique/ESN</option>
+                            <option value = "Service public autres">Service public autres</option>
+                            <option value = "Service public d'état">Service public d'état</option>
+                            <option value = "Service public des collectivités territorial">Service public des collectivités territorial</option>
+                            <option value = "Service public hospitalier">Service public hospitalier</option>
+                            <option value = "Service aux Entreprises">Service aux Entreprises</option>
+                            <option value = "Service aux Personnes/Particuliers">Service aux Personnes/Particuliers</option>
+                            <option value = "Tourisme/Hôtellerie/Loisirs">Tourisme/Hôtellerie/Loisirs</option>
+                            <option value = "Transports/Logistique">Transports/Logistique</option>
+                            <option value = "autre">Autre</option>
+                        </select>
+                    </div> //SecteurActivite
+                    <div class = "Salaire">
+                        <span class = "textSalaire">Salaire souhaité (Annuel) *</span>
+                        <input type="number" id="salaire_input" placeholder="Entrez votre salaire souhaité" class="input_salaire">
                     </div>
-                        
+                    <div class = "RQTH Handicap">
+                        <div class = "Left_Side_Handicap">
+                            <span class = "textRQTH">Reconnaissance de la qualité de travailleur handicapé (RQTH)?</span>
+                            <button id = "En savoir plus " class="button_en_savoir_plus_RQTH">En savoir plus</button>
+                        </div>
+                        <div class = "Right_Side_Handicap">
+                            <label class = "switch">
+                                <input type="checkbox" id="RQTH_Slider">
+                                <span class="slider"></span>
+                            </label>
+                            <span id="RQTH_value">Non</span>
+
+                        </div>
+                    </div>
+                    <div class = "EnregistrerSituations">
+                        <button id="enregistrer_button" class="button_enregistrer">Enregistrer</button>
+                    </div>
+
                 </div> //MaSituationContent
 
             </div> //BlocMaSituation
         </div> //BlocPrincipale
+
+        <div class = "BlocHandicap">
+            <div class = "HandicapContent">
+                <div class = "Handicaptext">
+                    <title>Reconnu Travailleur handicapé</title>
+                    <p>En activant cette reconnaissance, 
+vous déclarez sur l'honneur avoir
+obtenu la reconnaissance de 
+travailleur handicapé par la 
+Commission des Droits et de 
+l'Autonomie des travailleurs 
+handicapés 
+(anciennement COTOREP).</p>
+
+                </div>
+        </div>
 
 
 <script> //remplacer la photo du profil
