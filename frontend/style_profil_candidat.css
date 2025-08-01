@@ -1,5 +1,5 @@
 
-/* CLAUDE EST LE PIRE ENCULE DU MONDE */
+
 
 
 html,
@@ -66,3 +66,23 @@ body {
     z-index: 2;
 }
 
+
+.ButtonStatusContent {
+    position: relative;
+}
+
+.fleche_status {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.button_status:focus + .fleche_status {
+    transform: translateY(-50%) rotate(90deg);
+}

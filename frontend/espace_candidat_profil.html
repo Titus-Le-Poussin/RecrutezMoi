@@ -99,14 +99,14 @@
                 </div>
                 <div class = "ButtonSatusDropDown">
                     <div class = "ButtonStatusContent">
-                        <button id = "status_selected_btn" class="button_status">En recherche active</button>
-                        <div id = "status_selected" class="Options_status" style ="display: none;"  >
-                            <button class="Status_options">En recherche active</button>
-                            <button class="Status_options">Ouvert aux opportunitées</button>
-                            <button class="Status_options">Pas en recherche</button>
-                        </div>
+                        <select id = status_selected_btn class = "button_status">
+                            <option value="en_recherche_active">En recherche active</option>
+                            <option value="ouvert_aux_opportunites">Ouvert aux opportunités</option>
+                            <option value="pas_en_recherche">Pas en recherche</option>
+                        </select>
+                        <img src="fleche2.png" class="fleche_status">
                     </div>
-                    <img src="fleche2.png" class="fleche_status">
+                    
                                       
                 </div>
             </div>
@@ -187,30 +187,9 @@
                 </div> //MaSituationContent
 
             </div> //BlocMaSituation
+        </div> //BlocPrincipale
 
-<script> //menu deroulant Status NON FONCTIONNEL
-const statusBtn = document.getElementById('status_selected_btn');
-const statusOptions = document.getElementById('status_options');
-const options = statusOptions.querySelectorAll('.status_option');
 
-statusBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    statusOptions.style.display = statusOptions.style.display === 'none' ? 'block' : 'none';
-});
-
-options.forEach(option => {
-    option.addEventListener('click', () => {
-        statusBtn.textContent = option.textContent + ' ▼';
-        statusOptions.style.display = 'none';
-    });
-});
-
-document.addEventListener('click', (e) => {
-    if (!statusBtn.contains(e.target) && !statusOptions.contains(e.target)) {
-        statusOptions.style.display = 'none';
-    }
-});
-</script>
 <script> //remplacer la photo du profil
 document.getElementById('image_upload').addEventListener('change', function(e) {
     const file = e.target.files[0];
@@ -224,6 +203,25 @@ document.getElementById('image_upload').addEventListener('change', function(e) {
 });
 </script>
 
+<script> // rotation fleche lors de la sélection du statut
+const select = document.getElementById('status_selected_btn');
+const fleche = document.querySelector('.fleche_status');
+
+function updateFleche() {
+    if (document.activeElement === select) {
+        fleche.style.transform = 'translateY(-50%) rotate(90deg)';
+    } else {
+        fleche.style.transform = 'translateY(-50%) rotate(0deg)';
+    }
+}
+
+select.addEventListener('focus', updateFleche);
+select.addEventListener('blur', updateFleche);
+select.addEventListener('change', updateFleche);
+select.addEventListener('click', () => {
+    setTimeout(updateFleche, 100);
+});
+</script>
 
 
     </body>
