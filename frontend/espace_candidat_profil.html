@@ -104,7 +104,7 @@
                             <option value="ouvert_aux_opportunites">Ouvert aux opportunités</option>
                             <option value="pas_en_recherche">Pas en recherche</option>
                         </select>
-                        <img src="fleche2.png" class="fleche_status">
+                        
                     </div>
                     
                                       
@@ -183,6 +183,36 @@
                             
                         </div>
                     </div> //SituationActuelle
+                    <div class = "NiveauD'Experience">
+                        <span class = "textNiveauExperience">Niveau d'expérience *</span>
+                        <select id="niveau_experience_selected_btn" class="button_niveau_experience">
+                            <option value="debutant">Débutant</option>
+                            <option value="intermediaire">2-3 ans</option>
+                            <option value="expert">4-10 ans</option>
+                            <option value="senior">10 ans +</option>
+                        </select>
+                    </div> //NiveauD'Experience
+                    <div class = "NiveauQualifications">
+                        <span class = "textNiveauQualifications">Niveau de qualifications *</span>
+                        <select id="niveau_qualifications_selected_btn" class="button_niveau_qualifications">
+                            <option value="aucune">Aucune</option>
+                            <option value="bac">Employé/Opérateur/Ouvrier SPE/Bac</option>
+                            <option value="bac_plus_2">Technicien/Employé Bac +2 </option>
+                            <option value="bac_plus_3/4">Agent de maîtrise/Bac +3/4</option>
+                            <option value="bac_plus_5">Ingénieur/Cadre/Bac +5</option>
+                            <option value="Cadre_Dirigeant">Cadre Dirigeant</option>
+                        </select>
+                    </div> //NiveauQualifications
+                    <div class = "SecteurActivite">>
+                        <span class = "textSecteurActivite">Secteur(s) d'activité? *</span>
+                        <select id="secteur_activite_selected_btn" class="button_secteur_activite">
+                            <option value="informatique">Informatique</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="finance">Finance</option>
+                            <option value="ressources_humaines">Ressources Humaines</option>
+                            <option value="logistique">Logistique</option>
+                            <option value="autre">Autre</option>
+                    </div>
                         
                 </div> //MaSituationContent
 
@@ -203,25 +233,6 @@ document.getElementById('image_upload').addEventListener('change', function(e) {
 });
 </script>
 
-<script> // rotation fleche lors de la sélection du statut
-const select = document.getElementById('status_selected_btn');
-const fleche = document.querySelector('.fleche_status');
-
-function updateFleche() {
-    if (document.activeElement === select) {
-        fleche.style.transform = 'translateY(-50%) rotate(90deg)';
-    } else {
-        fleche.style.transform = 'translateY(-50%) rotate(0deg)';
-    }
-}
-
-select.addEventListener('focus', updateFleche);
-select.addEventListener('blur', updateFleche);
-select.addEventListener('change', updateFleche);
-select.addEventListener('click', () => {
-    setTimeout(updateFleche, 100);
-});
-</script>
 
 
     </body>
