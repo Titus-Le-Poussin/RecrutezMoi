@@ -161,7 +161,32 @@
                         </div>
                     </div>
                 </div> //MesInformationsContent
-            </div>
+            </div> // BlocMesInformations
+            <div class = "BlocMaSituation">
+                <div class = "MaSituationContent">
+                    <div class = "MaSituationTitle">
+                        <h2>Ma Situation</h2>
+                        <p>les champs obligatoires sont précédés d'une étoile *</p1>
+                    </div> //MaSituationTitle
+                    <div class = "SituationActuelle">
+                        <span class = "textsituationactuelle">Situation actuelle?*</span>
+                        <button id = "situationEnPoste_btn" class = "button_situation">En poste</button>
+                        <button id = "situationSansEmploi_btn" class = "button_situation">Sans emploi</button>
+                        <div class = "situation_options_choose_button">
+                            <select id="situation_selected_btn" class="button_situation">Situation *
+                                <option value="actif">Actif</option>
+                                <option value="etudiant">Étudiant</option>
+                                <option value="jeune_diplome">Jeune Diplômé</option>
+                                <option value="reconversion">En reconversion</option>
+                            </select>
+
+                            
+                        </div>
+                    </div> //SituationActuelle
+                        
+                </div> //MaSituationContent
+
+            </div> //BlocMaSituation
 
 <script> //menu deroulant Status NON FONCTIONNEL
 const statusBtn = document.getElementById('status_selected_btn');
@@ -198,6 +223,9 @@ document.getElementById('image_upload').addEventListener('change', function(e) {
     }
 });
 </script>
+
+
+
     </body>
 
 </DOCTYPE>
