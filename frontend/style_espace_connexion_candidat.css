@@ -239,3 +239,14 @@ body {
     align-items: center;
     margin-bottom: 20px;
 }
+
+  a {
+    color: rgb(255, 255, 255);          /* couleur des liens normaux */
+    text-decoration: none; /* enlève le soulignement */
+  }
+
+
+
+  a:visited {
+    color: rgb(255, 255, 255);          /* garde la même couleur même après visite */
+  }
