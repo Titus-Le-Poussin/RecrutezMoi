@@ -240,6 +240,7 @@ body {
     margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
   a {
     color: rgb(255, 255, 255);          /* couleur des liens normaux */
     text-decoration: none; /* enlève le soulignement */
@@ -250,3 +251,6 @@ body {
   a:visited {
     color: rgb(255, 255, 255);          /* garde la même couleur même après visite */
   }
+=======
+
+>>>>>>> 6f3be3d3837119479828f9c650af96364491d87a
