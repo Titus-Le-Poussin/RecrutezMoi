@@ -71,8 +71,8 @@
         <div class = "BlocMonProfil">
             <div class="MonProfilContent">
                 <div>
-                    <title>Mon Profil</title>
-                    <h1>Une photo? <BR>(Souriante et professionel)</BR></h1>
+                    <span class ="TopTitle">Mon Profil</span>
+                    
                 </div>
                 
                 <div class="MonProfilImage">
@@ -81,6 +81,7 @@
                         <img src="fish profile@4x.png" class="image_profil" id="photo_profil">
                     </div>
                     <form class="upload_image_form">
+                        <span class = "UnderTitle"></span>Une photo? <BR>(Souriante et professionel)</BR></span>
                         <label for="image_upload" class="upload_label">Changer la photo</label>
                         <input type="file" id="image_upload" name="image_upload" accept="image/*" class="upload_input">
                     </form>
@@ -95,7 +96,7 @@
         <div class = "BlocMonStatus">
             <div class = "StatusContent">
                 <div class = "StatusTitle">
-                    <h2>Mon Status</h2>
+                    <span class ="TopTitle">Mon Status</span>>
                 </div>
                 <div class = "ButtonSatusDropDown">
                     <div class = "ButtonStatusContent">
@@ -116,8 +117,8 @@
             <div class = "BlocMesInformations">
                 <div class = "MesInformationsContent">
                     <div class = "MesInformationsTitle">
-                        <h2>Mes Informations</h2>
-                        <p>les champs obligatoires sont précédés d'une étoile *</p1>
+                        <span class ="TopTitle">Mes informations</span>
+                        <span class = "UnderTitle">Les champs obligatoires sont précédés d'une étoile *</span>
                     </div>
                     <div class = "MesInformationsText">
                         <div class = "InformationsLEFT">
@@ -136,7 +137,7 @@
                             </div>
                             <div class = "SupprimerCompte">
                                 <span class = "textSupprimerCompte">Supprimer mon compte</span>
-                                <button id = "SupprimerCompteButton" class="button_SupprimerCompte">Supprimer</button>
+                                <button id = "SupprimerButton" class="button_Supprimer">Supprimer</button>
                             </div>
 
 
@@ -165,8 +166,8 @@
             <div class = "BlocMaSituation">
                 <div class = "MaSituationContent">
                     <div class = "MaSituationTitle">
-                        <h2>Ma Situation</h2>
-                        <p>les champs obligatoires sont précédés d'une étoile *</p1>
+                        <span class ="TopTitle">Ma situation</span>
+                        <span class = "UnderTitle">Les champs obligatoires sont précédés d'une étoile *</span>
                     </div> //MaSituationTitle
                     <div class = "SituationActuelle">
                         <span class = "textsituationactuelle">Situation actuelle?*</span>
@@ -260,12 +261,12 @@
                 </div> //MaSituationContent
 
             </div> //BlocMaSituation
-<<<<<<< HEAD
+
             <div class = "BlocMesAlertes">
                 <div class = "MesAlertesContent">
                     <div class ="MesAlertesTitle">
-                        <span class ="TitreAlertes">Mes alertes</span>
-                        <p>Les champs obligatoires sont précédés d une étoile *</p>
+                        <span class ="TopTitle">Mes alertes</span>
+                        <span class = "UnderTitle">Les champs obligatoires sont précédés d'une étoile *</span>
                     </div> //MesAlertesTitle
                     <button class = "AjouterAlerteButton"> Ajouter une alerte + </button>
                     <div class ="MesAlertesCreateBloc">   
@@ -309,20 +310,50 @@
                                     <input type="text" class="inputrechercheAlertes" placeholder="Orange, Naurauto, SNCF, ...">
                                 </div>
                             </div> //RightAlertForm
+                            <div class = "MiddleCenterAlertForm">
+                                <div class = "Fréquence">
+                                    <span class ="textFréquence">Je veux recevoir mes nouvelles offres mar emails</span>
+                                    <button id = "quotidien_btn" class = "button_frequence">Quotidien</button>
+                                    <button id = "hebdomadaire_btn" class = "button_frequence">Hebdomadaire</button>
+                                </div> //Fréquence
+                            </div>
                         </div> //CreateAlerteFormulaire
+                        <div class = "AlertesEnregistrées">
+                            <div class = "AlertesEnregistrerLeft">
+                                <input type="text" class="inputRechercherAlerte" placeholder="Nom de l'alerte">
+                                <span class="textFrequenceAlerte">Fréquence</span> // A CHANGER , il faut que ce soit en rapport avec la fréquence d'alerte
+                            </div>
+                            <div class = "AlertesEnregistrerCenter">
+                                <input type="text" class="MetierRechercherAlerte" placeholder="Type de contrat">
+                                <div class = "localiteOffreAlerteEnregistréeLeft">
+                                    <button class ="voir les offres">Voir les offres</button>
+                                </div>
+                                <div class = "localiteOffreAlerteEnregistréeRight">
+                                    <span class ="textLocaliteAlerte">Localité(s)</span> // A CHANGER , il faut que ce soit en rapport avec la localité
+                                </div>                                
+                            </div>
+                            <div class = "AlertesEnregistrerRight">
+                                <label class = "switch">
+                                    <input type="checkbox" id="Activate_Slider">
+                                    <span class="slider"></span>
+                                </label>
+                                <button id = "SupprimerButton" class="button_Supprimer">Supprimer</button>
+
+                            </div>
+                        </div> //AlertesEnregistrées
                     </div> //MesAlertesCreateBloc
                 </div> //MesAlertesContent
             </div> //BlocMesAlertes
         
-=======
->>>>>>> 6f3be3d3837119479828f9c650af96364491d87a
+
+
         </div> //BlocPrincipale
 
         <div class = "BlocHandicap">
             <div class = "HandicapContent">
                 <div class = "Handicaptext">
-                    <title>Reconnu Travailleur handicapé</title>
-                    <p>En activant cette reconnaissance, 
+                    <span class ="TopTitle">Reconnu Travailleur handicapé</span>
+                    <p class = "UnderTitle">En activant cette reconnaissance, 
 vous déclarez sur l'honneur avoir
 obtenu la reconnaissance de 
 travailleur handicapé par la 
@@ -330,11 +361,12 @@ Commission des Droits et de
 l'Autonomie des travailleurs 
 handicapés 
 (anciennement COTOREP).</p>
-                    div class = "HandicapButton">
-                        <button id="enregistrer_rqth_button" class="button_daccordRQTH">D'accord</button>
-                        <button id="retour_rqth" class = "button_retourRQTH">Retour</button>
-                    </div> //HandicapButton
-
+                </div> //Handicaptext
+                <div class = "HandicapButton">
+                    <button id="enregistrer_rqth_button" class="button_daccordRQTH">D'accord</button>
+                    <button id="retour_rqth" class = "button_retourRQTH">Retour</button>
+                </div> //HandicapButton
+                
             </div> 
         </div> //BlocHandicap
 
