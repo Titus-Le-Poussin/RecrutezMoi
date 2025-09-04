@@ -1,5 +1,5 @@
 
-
+/* CLAUDE EST LE PIRE ENCULE DU MONDE */
 
 
 html,
@@ -30,7 +30,10 @@ body {
     width: 90vw;
     max-width: 1900px;
     margin: 10px auto 10px auto;
+    background-color: #33658a;
+    border-radius : 50px;
 }
+
 
 .favicon_image {
     height:100%;
@@ -41,6 +44,15 @@ body {
     align-items: center;
     height: clamp(80px, 6vw, 80px); /* adapte la hauteur */
 }
+
+
+
+
+
+
+
+
+
 
 .hublot {
     position: relative;
@@ -66,71 +78,5 @@ body {
     z-index: 2;
 }
 
-<<<<<<< HEAD
-.Banderolle_Top {
-    background-color: #33658a;
-}
-
-.
-=======
 
 
-
-
-
-
-
-
-
-
-.Right_Side_Handicap {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 48px;
-    height: 26px;
-    margin-left: 8px;
-}
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 26px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-}
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.10);
-}
-.switch input:checked + .slider {
-    background-color: #000000;
-}
-.switch input:checked + .slider:before {
-    transform: translateX(22px);
-}
-#RQTH_value {
-    min-width: 32px;
-    font-weight: bold;
-    color: #222;
-    margin-left: 6px;
-}
->>>>>>> 6f3be3d3837119479828f9c650af96364491d87a

@@ -1,0 +1,401 @@
+<DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="stylesheet" href="style_profil_candidat.css">
+        <title>Recrutez moi! Offres, CV, candidats et entreprises</title>
+
+        <!--encodage pour gérer les accents -->
+        <meta charset = "UTF-8"> 
+
+        <!--pour que le site s'adapte à l'écran (mobile...) -->
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--le nom de l'auteur -->
+        <meta name="author" content="Timothée ITHIER">
+
+        <!--Autorise google et les autres moteurs à indexer (visiter, analyser, enregistrer et afficher) le site-->
+        <meta name="robots" content="index, follow">
+
+        <!-- Description visible dans Google (sous le lien bleu) -->
+        <meta name="description" content="Recrutez moi! est une plateforme de recrutement qui met en relation les candidats et les entreprises.">
+
+        <!-- Résumé affiché dans l'aperçu (petit texte gris) -->
+        <meta name="og:description" content="Recrutez moi! est une plateforme de recrutement qui met en relation les candidats et les entreprises.">
+
+
+        <!-- Titre affiché dans l'aperçu (gros texte bleu sur LinkedIn) -->
+        <meta property="og:title" content="Recrutez moi! Offres, CV, candidats et entreprises">
+
+        <!-- Image affiché dans l'aperçu (doit être un lien en ligne!) -->
+        <meta property="og:image" content="https://imgur.com/a/ObZ96ZF">
+
+        <!-- Lien vers ton site (le lien cliquable dans l’aperçu) -->
+        <meta property="og:url" content="https://recrutezmoi.com">
+
+        <!-- Type de contenu (site web normal, pas article ni vidéo) -->
+        <meta property="og:type" content="website">
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="favicon">
+                <img src="Favicon@4x.png" alt="Favicon" class="favicon_image">
+            </div> //favicon
+            <div class="Banderolle_Top">
+                <span class ="jetalo">On se jette à l'eau</span>
+                <div class = "boutton_header">
+                    <button class="button_recherche_emploi">Recherche d'emplois</button>
+                    <img src="Sacoche Travail @4x.png" class="imgRechercheEmplois"> 
+
+                </div> //RechercheEmploisButton
+                <img src="bateau @4x.png" class = "PetitBateau">
+                <div class = "boutton_header">
+                    <button class="button_espace_entreprise">Espace Entreprise</button>
+                    <img src="entrepriseLogo@4x.png" class="imgEspaceEntreprise">
+                </div> //EspaceEntrepriseButton
+                <div class="boutton_header">
+                    <button class="button_espace_candidat">Espace Candidat</button>
+                    <img src="candidatLogo@4x.png" class = "imgEspaceCandidat">
+                </div> //EspaceCandidatButton
+            </div> //Banderolle_Top
+        </div> //header
+
+        <div class = "BlocButtonPage">
+            <div class = "buttonPage">
+                <button class="button_mes_informations">Mes Informations</button>
+                <button class ="button_ma_situation">Ma Situation</button>
+                <button class="button_mes_alertes">Mes Alertes</button>
+                <button class="button_mes_CV">Mes CV</button>
+            </div> //buttonPage
+        </div> //BlocButtonPage
+        <div class = "BlocMonProfil">
+            <div class="MonProfilContent">
+                <div class ="TopTitle">
+                    <span class ="TileMonProfil">Mon Profil</span>
+                    
+                </div>
+                
+                <div class="MonProfilImage">
+                    <div class="hublot">
+                        <img src="Hublo@4x.png" class="image_hublot">
+                        <img src="fish profile@4x.png" class="image_profil" id="photo_profil">
+                    </div>
+                    <form class="upload_image_form">
+                        <span class = "UnderTitle"></span>Une photo? <BR>(Souriante et professionel)</BR></span>
+                        <label for="image_upload" class="upload_label">Changer la photo</label>
+                        <input type="file" id="image_upload" name="image_upload" accept="image/*" class="upload_input">
+                    </form>
+                    <div class = "info_profil">
+                        <div><span id = "nom_profil">NOM </span><span id = "prenom_profil">Prénom</span></div>
+                        <div><span id = "situation_profil">Situation</span></div>
+                        <div><span id = "email_profil">Adresse mail</span><span id = "tel_profil">Téléphone</span></div>
+                    </div>
+                </div>
+            </div> 
+        </div> //BlocMonProfil
+        <div class = "BlocMonStatus">
+            <div class = "StatusContent">
+                <div class = "TopTitle">
+                    <span class ="TileMonStatus">Mon Status</span>
+                </div>
+                <div class = "ButtonSatusDropDown">
+                    <div class = "ButtonStatusContent">
+                        <select id = status_selected_btn class = "button_status">
+                            <option value="en_recherche_active">En recherche active</option>
+                            <option value="ouvert_aux_opportunites">Ouvert aux opportunités</option>
+                            <option value="pas_en_recherche">Pas en recherche</option>
+                        </select>
+                        
+                    </div>
+                    
+                                      
+                </div>
+            </div>
+        </div> //BlocMonStatus
+
+        <div class = "BlocPrincipale">
+            <div class = "BlocMesInformations">
+                <div class = "MesInformationsContent">
+                    <div class = "TopTitle">
+                        <span class ="TitleMesInformationsTitle">Mes informations</span>
+                        <span class = "UnderTitle">Les champs obligatoires sont précédés d'une étoile *</span>
+                    </div>
+                    <div class = "MesInformationsText">
+                        <div class = "InformationsLEFT">
+                            <div class = "SecondTitle">
+                                <span class = "textPrenom">Prénom *</span>
+                                <input type="text" id="prenom_input" class="input_prenom">
+                            </div>
+                            <div class = "SecondTitle">
+                                <span class = "textEmail">Adresse e-mail *</span>
+                                <input type="email" id="email_input" class="input_email">
+                            </div>
+                            <div class = "SecondTitle">
+                                <span class = "Telephone">Téléphone</span>
+                                <input type="tel" id="tel_input" class="input_tel">
+                            </div>
+                            <div class = "SecondTitle">
+                                <span class = "textPermisTravail">Permis de travail en France? </span>
+                                <button id = "Oui_Button_Permis" class="button_Permis">Oui</button>
+                                <button id = "Non_Button_Permis" class="button_Permis">Non</button>
+                            </div>
+                            <div class = "SecondTitle">
+                                <span class = "textSupprimerCompte">Supprimer mon compte</span>
+                                <button id = "SupprimerButton" class="button_Supprimer">Supprimer</button>
+                            </div>
+
+
+                        </div>
+                        <div class = "InformationsRIGHT">
+                            <div class = "SecondTitle">
+                                <span class = "textNom">Nom *</span>
+                                <input type="text" id="nom_input" class="input_nom">
+                            </div>
+                            <div class = "SecondTitle">
+                                <span class = "textMDP">Mot de passe</span>
+                                <div class = "LightBlueButton">
+                                    <button id = "ChangerMDPButton" class="button_ChangerMDP">Modifier mon mot de passe</button>
+                                </div>
+                            </div>
+                            <div class = "SecondTitle">
+                                <span class = "textpaysresidence">Pays de résidence *</span>
+                                <input type="text" id="pays_input" class="input_pays">
+                            </div>
+                            <div class = "SecondTitle">
+                                <span class = "textResidence">Ville de résidence *</span>
+                                <input type="text" id="residence_input" class="input_residence">
+                            </div>
+                            <div class = "LightBlueButton">
+                                <span class = "textEnregistrerInformations">Enregistrer</span>
+                                <button id = "EnregistrerButton" class="button_Enregistrer">Enregistrer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> //MesInformationsContent
+            </div> // BlocMesInformations
+            <div class = "BlocMaSituation">
+                <div class = "MaSituationContent">
+                    <div class = "TopTitle">
+                        <span class ="MaSituationTitle">Ma situation</span>
+                        <span class = "UnderTitle">Les champs obligatoires sont précédés d'une étoile *</span>
+                    </div> //MaSituationTitle
+                    <div class = "SecondeTitle">
+                        <span class = "textsituationactuelle">Situation actuelle?*</span>
+                        <button id = "situationEnPoste_btn" class = "button_situation">En poste</button>
+                        <button id = "situationSansEmploi_btn" class = "button_situation">Sans emploi</button>
+                        <div class = "situation_options_choose_button">
+                            <select id="situation_selected_btn" class="button_situation">Situation *
+                                <option value="actif">Actif</option>
+                                <option value="etudiant">Étudiant</option>
+                                <option value="jeune_diplome">Jeune Diplômé</option>
+                                <option value="reconversion">En reconversion</option>
+                            </select>
+
+                            
+                        </div>
+                    </div> //SituationActuelle
+                    <div class = "SecondeTitle">
+                        <span class = "textNiveauExperience">Niveau d'expérience *</span>
+                        <select id="niveau_experience_selected_btn" class="button_niveau_experience">
+                            <option value="debutant">Débutant</option>
+                            <option value="intermediaire">2-3 ans</option>
+                            <option value="expert">4-10 ans</option>
+                            <option value="senior">10 ans +</option>
+                        </select>
+                    </div> //NiveauD'Experience
+                    <div class = "NiveauQualifications">
+                        <span class = "textNiveauQualifications">Niveau de qualifications *</span>
+                        <select id="niveau_qualifications_selected_btn" class="button_niveau_qualifications">
+                            <option value="aucune">Aucune</option>
+                            <option value="bac">Employé/Opérateur/Ouvrier SPE/Bac</option>
+                            <option value="bac_plus_2">Technicien/Employé Bac +2 </option>
+                            <option value="bac_plus_3/4">Agent de maîtrise/Bac +3/4</option>
+                            <option value="bac_plus_5">Ingénieur/Cadre/Bac +5</option>
+                            <option value="Cadre_Dirigeant">Cadre Dirigeant</option>
+                        </select>
+                    </div> //NiveauQualifications
+                    <div class = "SecondeTitle">
+                        <span class = "textSecteurActivite">Secteur(s) d'activité? *</span>
+                        <select id="secteur_activite_selected_btn" class="button_secteur_activite">
+                            <option value = "Agriculture/Pêche">Agriculture/Pêche</option>
+                            <option value = "Banque/Assurance/finance">Banque/Assurance/finance</option>
+                            <option value = "BTP">BTP</option>
+                            <option value = "Distribution/Commerce de gros">Distribution/Commerce de gros</option>
+                            <option value = "Enseignement/Formation">Enseignement/Formation</option>
+                            <option value = "Immobilier">Immobilier</option>
+                            <option value = "Industrie Aéraunotique/Aérospacial">Industrie Aéraunotique/Aérospacial</option>
+                            <option value = "Industrie Agro-Alimentaire">Industrie Agro-Alimentaire</option>
+                            <option value = "Industrie Auto/Meca/Navale">Industrie Auto/Meca/Navale</option>
+                            <option value = "Industrie High-tech/Telecom">Industrie High-tech/Telecom</option>
+                            <option value = "Industrie Manufacturière">Industrie Manufacturière</option>
+                            <option value = "Industrie Pétrolière/Pétrochimie">Industrie Pétrolière/Pétrochimie</option>
+                            <option value = "Industrie Pharmaceutique/Biotechn./chimie">Industrie Pharmaceutique/Biotechn./chimie</option>
+                            <option value = "Industrie Média/Internet/Communication">Industrie Média/Internet/Communication</option>
+                            <option value = "Restauration">Restauration</option>
+                            <option value = "Santé/Social/Association">Santé/Social/Association</option>
+                            <option value = "Secteur énergie/Environnement">Secteur énergie/Environnement</option>
+                            <option value = "Secteur Informatique/ESN">Secteur Informatique/ESN</option>
+                            <option value = "Service public autres">Service public autres</option>
+                            <option value = "Service public d'état">Service public d'état</option>
+                            <option value = "Service public des collectivités territorial">Service public des collectivités territorial</option>
+                            <option value = "Service public hospitalier">Service public hospitalier</option>
+                            <option value = "Service aux Entreprises">Service aux Entreprises</option>
+                            <option value = "Service aux Personnes/Particuliers">Service aux Personnes/Particuliers</option>
+                            <option value = "Tourisme/Hôtellerie/Loisirs">Tourisme/Hôtellerie/Loisirs</option>
+                            <option value = "Transports/Logistique">Transports/Logistique</option>
+                            <option value = "autre">Autre</option>
+                        </select>
+                    </div> //SecteurActivite
+                    <div class = "Salaire">
+                        <span class = "textSalaire">Salaire souhaité (Annuel) *</span>
+                        <input type="number" id="salaire_input" placeholder="Entrez votre salaire souhaité" class="input_salaire">
+                    </div>
+                    <div class = "RQTH Handicap">
+                        <div class = "Left_Side_Handicap">
+                            <span class = "textRQTH">Reconnaissance de la qualité de travailleur handicapé (RQTH)?</span>
+                            <button id = "En savoir plus " class="button_en_savoir_plus_RQTH">En savoir plus</button>
+                        </div>
+                        <div class = "Right_Side_Handicap">
+                            <label class = "switch">
+                                <input type="checkbox" id="RQTH_Slider">
+                                <span class="slider"></span>
+                            </label>
+                            <span id="RQTH_value">Non</span>
+
+                        </div>
+                    </div>
+                    <div class = "LightBlueButton">
+                        <button id="enregistrer_button" class="button_enregistrer">Enregistrer</button>
+                    </div>
+
+                </div> //MaSituationContent
+
+            </div> //BlocMaSituation
+
+            <div class = "BlocMesAlertes">
+                <div class = "MesAlertesContent">
+                    <div class ="TopTitle">
+                        <span class ="MesAlertesTitle">Mes alertes</span>
+                        <span class = "UnderTitle">Les champs obligatoires sont précédés d'une étoile *</span>
+                    </div> //MesAlertesTitle
+                    <button class = "AjouterAlerteButton"> Ajouter une alerte + </button>
+                    <div class ="MesAlertesCreateBloc">   
+                        <div class = "CreateAlerteFormulaire">
+                            <div class ="LeftAlertFormulaire">
+                                <span class ="nomAlerte">Nom de l'alerte</span>
+                                <input type="text" class="inputNomAlerte" placeholder="Entrez le nom de l'alerte">
+                                <div class = "MaRecherche">Ma recherche
+                                    <div class = "localité">
+                                        <span class ="textLocalite">localité(s) (3 choix max)</span>
+                                        <input type="text" class="inputrechercheAlertes" placeholder="Ville, département, région">
+                                    </div>
+                                    <div class = "typeContrats">
+                                        <span class ="textTypeContrat">Type(s) de contrat</span>
+                                        <select id="type_contrat_selected_btn" class="button_type_contrat">
+                                            <option value="alternance">Alternance</option>
+                                            <option value="cdd">CDD</option>
+                                            <option value="cdi">CDI</option>
+                                            <option value="fonctionnaire">Fonctionnaire</option>
+                                            <option value="franchise">Franchise</option>
+                                            <option value="freelance">Freelance</option>
+                                            <option value="independant">Indépendant</option>
+                                            <option value="interim">Intérim</option>
+                                            <option value="stage">Stage</option>
+                                            <option value="stagelycée">Stage de Lycée</option>
+                                        </select>
+                                    </div>
+                                </div> //MaRecherche
+                            </div> //LeftAlertFormulaire
+
+                            <div class ="RightAlertForm">
+                                <div class="AddButtonAlertes">
+                                    <button class="buttonAjouterAlerte">Ajouter</button>
+                                </div>
+                                <div class = "Métiers">
+                                    <span class ="textmétiers">Métier(s) (3 choix max)</span>
+                                    <input type="text" class="inputrechercheAlertes" placeholder="Développeur, Designer, ...">
+                                </div>
+                                <div class = "Mot Clé">
+                                    <span class ="textMotCle">Mot Clé</span>
+                                    <input type="text" class="inputrechercheAlertes" placeholder="Orange, Naurauto, SNCF, ...">
+                                </div>
+                            </div> //RightAlertForm
+                            <div class = "MiddleCenterAlertForm">
+                                <div class = "Fréquence">
+                                    <span class ="textFréquence">Je veux recevoir mes nouvelles offres mar emails</span>
+                                    <button id = "quotidien_btn" class = "button_frequence">Quotidien</button>
+                                    <button id = "hebdomadaire_btn" class = "button_frequence">Hebdomadaire</button>
+                                </div> //Fréquence
+                            </div>
+                        </div> //CreateAlerteFormulaire
+                    </div> //MesAlertesCreateBloc
+                    <div class = "AlertesEnregistrées">
+                            <div class = "AlertesEnregistrerLeft">
+                                <input type="text" class="inputRechercherAlerte" placeholder="Nom de l'alerte">
+                                <span class="textFrequenceAlerte">Fréquence</span> // A CHANGER , il faut que ce soit en rapport avec la fréquence d'alerte
+                            </div>
+                            <div class = "AlertesEnregistrerCenter">
+                                <input type="text" class="MetierRechercherAlerte" placeholder="Type de contrat">
+                                <div class = "localiteOffreAlerteEnregistréeLeft">
+                                    <button class ="voir les offres">Voir les offres</button>
+                                </div>
+                                <div class = "localiteOffreAlerteEnregistréeRight">
+                                    <span class ="textLocaliteAlerte">Localité(s)</span> // A CHANGER , il faut que ce soit en rapport avec la localité
+                                </div>                                
+                            </div>
+                            <div class = "AlertesEnregistrerRight">
+                                <label class = "switch">
+                                    <input type="checkbox" id="Activate_Slider">
+                                    <span class="slider"></span>
+                                </label>
+                                <button id = "SupprimerButton" class="button_Supprimer">Supprimer</button>
+
+                            </div>
+                    </div> //AlertesEnregistrées
+                </div> //MesAlertesContent
+            </div> //BlocMesAlertes
+        
+
+
+        </div> //BlocPrincipale
+
+        <div class = "BlocHandicap">
+            <div class = "HandicapContent">
+                <div class = "Handicaptext">
+                    <span class ="TopTitle">Reconnu Travailleur handicapé</span>
+                    <p class = "UnderTitle">En activant cette reconnaissance, 
+vous déclarez sur l'honneur avoir
+obtenu la reconnaissance de 
+travailleur handicapé par la 
+Commission des Droits et de 
+l'Autonomie des travailleurs 
+handicapés 
+(anciennement COTOREP).</p>
+                </div> //Handicaptext
+                <div class = "HandicapButton">
+                    <button id="enregistrer_rqth_button" class="button_daccordRQTH">D'accord</button>
+                    <button id="retour_rqth" class = "button_retourRQTH">Retour</button>
+                </div> //HandicapButton
+                
+            </div> 
+        </div> //BlocHandicap
+
+
+<script> //remplacer la photo du profil
+document.getElementById('image_upload').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+            document.getElementById('photo_profil').src = ev.target.result;
+        }
+        reader.readAsDataURL(file);
+    }
+});
+</script>
+
+
+
+    </body>
+
+</DOCTYPE>
